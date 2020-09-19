@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+env/
+build/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+local_settings.py
+
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+.vscode
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+.DS_Store
+*.sqlite3
+media/
+*.pyc
+*.db
+*.pid
