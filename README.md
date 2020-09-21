@@ -39,7 +39,30 @@
 	$ sudo pip install virtualenv
 ```
 
-##### Future scope of improvements:
+## Flow to run auto mac microservices.
+
+1. Go to the autoUsers directory follow the below command:
+
+```
+python manage.py migrate
+pyhton manage.py createsupseruser
+python manage.py runserver 8888
+```
+
+2. Go to the autuDetails folder:
+
+```
+python manage.py migrate
+python manage.py assign_user_group_permissions
+python manage.py runserver
+```
+
+3. Log in on autuDetails admin panel for authentication using the autoUsers service user creds.
+
+> Note: For APIs end point please check the service README.md file
+
+
+### Future scope of improvements:
 - Unit testcases
 - Dockeriaze the project with health checks and graceful shutdown the services
 - Logger
