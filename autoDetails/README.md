@@ -62,6 +62,7 @@ GRANT ALL PRIVILEGES ON DATABASE auth_manufac TO developer;
 - Go the the auto details directory and run the script.
     sh
     $ python manage.py migrate
+    $ python manage.py assign_user_group_permissions
     $ python manage.py runserver
   
 # API ENDPOINTS

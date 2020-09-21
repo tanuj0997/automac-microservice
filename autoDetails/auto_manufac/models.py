@@ -33,51 +33,23 @@ class Manufacturer(AbstructBaseModel):
         PAKISTAN = 92
         RASIA = 7
 
-    class NAME:
-        UNITED_STATES = "UNITED_STATES"
-        INDIA = "INDIA"
-        AFGHANISTAN = "AFGHANISTAN"
-        POLAND = "POLAND"
-        CHINA = "CHINA"
-        FRANCE = "FRANCE"
-        IRAN = "IRAN"
-        JAPAN = "JAPAN"
-        PERU = "PERU"
-        PAKISTAN = "PAKISTAN"
-        RASIA = "RASIA"
-
     COUNTRY_CODE_CHOICES = (
-        (COUNTRY.UNITED_STATES, "United State"),
-        (COUNTRY.INDIA, "India"),
-        (COUNTRY.AFGHANISTAN, "Afghanistan"),
-        (COUNTRY.POLAND, "Poland"),
-        (COUNTRY.CHINA, "China"),
-        (COUNTRY.FRANCE, "France"),
-        (COUNTRY.JAPAN, "Japan"),
-        (COUNTRY.PERU, "Peru"),
-        (COUNTRY.PAKISTAN, "Pakistan"),
-        (COUNTRY.RASIA, "Rasia"),
-    )
-
-    NAME_CHOICES = (
-        (NAME.UNITED_STATES, "United State"),
-        (NAME.INDIA, "India"),
-        (NAME.AFGHANISTAN, "Afghanistan"),
-        (NAME.POLAND, "Poland"),
-        (NAME.CHINA, "China"),
-        (NAME.FRANCE, "France"),
-        (NAME.JAPAN, "Japan"),
-        (NAME.PERU, "Peru"),
-        (NAME.PAKISTAN, "Pakistan"),
-        (NAME.RASIA, "Rasia"),
+        (COUNTRY.UNITED_STATES, "1"),
+        (COUNTRY.INDIA, "91"),
+        (COUNTRY.AFGHANISTAN, "93"),
+        (COUNTRY.POLAND, "48"),
+        (COUNTRY.CHINA, "86"),
+        (COUNTRY.FRANCE, "33"),
+        (COUNTRY.JAPAN, "81"),
+        (COUNTRY.PERU, "51"),
+        (COUNTRY.PAKISTAN, "92"),
+        (COUNTRY.RASIA, "7"),
     )
 
     country = models.IntegerField(
         choices=COUNTRY_CODE_CHOICES, default=COUNTRY.UNITED_STATES
     )
-    name = models.CharField(
-        max_length=52, choices=NAME_CHOICES, default=NAME.UNITED_STATES
-    )
+    name = models.CharField(max_length=52)
 
     def __str__(self):
         return "{}".format(self.name)
